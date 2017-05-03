@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Address extends Component {
   render() {
@@ -14,5 +15,15 @@ class Address extends Component {
     );
   }
 }
+
+Address.propTypes = {
+  address: PropTypes.shape({
+    line1: PropTypes.string.isRequired,
+    town: PropTypes.string.isRequired,
+    county: PropTypes.string.isRequired,
+    country: PropTypes.string.isRequired,
+    zipCode: PropTypes.string
+  }).isRequired
+};
 
 export default Address;
