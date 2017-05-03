@@ -2,6 +2,17 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class Address extends Component {
+
+  static propTypes = {
+    address: PropTypes.shape({
+      line1: PropTypes.string.isRequired,
+      town: PropTypes.string.isRequired,
+      county: PropTypes.string.isRequired,
+      country: PropTypes.string.isRequired,
+      zipCode: PropTypes.string
+    }).isRequired
+  };
+
   render() {
     let address = this.props.address;
     return (
@@ -16,14 +27,5 @@ class Address extends Component {
   }
 }
 
-Address.propTypes = {
-  address: PropTypes.shape({
-    line1: PropTypes.string.isRequired,
-    town: PropTypes.string.isRequired,
-    county: PropTypes.string.isRequired,
-    country: PropTypes.string.isRequired,
-    zipCode: PropTypes.string
-  }).isRequired
-};
 
 export default Address;

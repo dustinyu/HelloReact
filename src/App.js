@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Hello from './Hello';
-import Address from './Address';
+import Contact from './Contact';
 
 class App extends Component {
 
@@ -10,8 +9,7 @@ class App extends Component {
        line1: '16 The Harbor',
        town: 'Newport',
        county: 'Gwent',
-       country: 'Wales',
-       zipCode: '10036'
+       country: 'Wales'
      };
 
     let name = {
@@ -20,9 +18,7 @@ class App extends Component {
     };
     return (
       <div className="App">
-        <Hello name={name} />
-        { /* <Address {...mockAddress} /> */ }
-        <Address address={mockAddress} />
+        <Contact name={name} address={mockAddress} />
       </div>
     );
   }

@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class Hello extends Component {
+class Name extends Component {
   render() {
     return (
-      <p>
-        Hello {this.props.name.firstName} {this.props.name.lastName}
+      <p onClick={this.props.onClick}>
+        {this.props.name.firstName} {this.props.name.lastName}
       </p>
     );
   }
 }
 
-Hello.propTypes = {
+Name.propTypes = {
   name: PropTypes.shape({
     firstName: PropTypes.string.isRequired,
     lastName: PropTypes.string
   }).isRequired
 };
 
-export default Hello;
+export default Name;
