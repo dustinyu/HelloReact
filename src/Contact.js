@@ -11,7 +11,6 @@ class Contact extends Component {
   }
 
   render() {
-    console.log('rendering Contact...');
     return (
       <div>
         <Name

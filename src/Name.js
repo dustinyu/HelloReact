@@ -4,9 +4,11 @@ import PropTypes from 'prop-types';
 class Name extends Component {
   render() {
     return (
-      <p onClick={this.props.onClick}>
-        {this.props.name.firstName} {this.props.name.lastName}
-      </p>
+      <div>
+        <p onClick={this.props.onClick}>
+          {this.props.name.firstName} {this.props.name.lastName}
+        </p>
+      </div>
     );
   }
 }
